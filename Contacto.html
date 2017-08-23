@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Actividades</title>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="inner">
+        <a href="Index.html" class="logo"><img src="images/logo.png"></a>
+        <!--NAV-->
+        <nav id="nav">
+            <a href="Index.html">Dawfitness</a>
+            <div class="dropdown">
+                <a href="Actividades.html" class="dropbtn">Actividades</a>
+                <div class="dropdown-content">
+                    <a href="Actividades.html#Alta" class="col-12">Intensidad Alta</a>
+                    <a href="Actividades.html#Media" class="col-12">Intensidad Media</a>
+                    <a href="Actividades.html#Baja" class="col-12">Intensidad baja</a>
+                </div>
+            </div>
+            <a href="Horarios.html">Horarios</a>
+            <div class="dropdown">
+                <a href="Profesionales.html" class="dropbtn">Profesionales</a>
+                <div class="dropdown-content">
+                    <a href="Profesionales.html#trainers" class="col-12">Personal Trainers</a>
+                    <a href="Profesionales.html#fisioterapeutas" class="col-12">Fisioterapeutas</a>
+                    <a href="Profesionales.html#nutricionistas" class="col-12">Nutricionistas</a>
+                </div>
+            </div>
+            <a href="Instalaciones.html">Instalaciones</a>
+            <a href="Contacto.html"><span class="active">Contacto</span></a>
+        </nav>
+    </div>
+</header>
+<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+
+<main>
+    <!-- MIGAS DE PAN --> <!--Sección reservada para migas de pan -->
+    <section>
+        <div class="row">
+            <div class="col-3">
+                Dawfitness ><span class="active"> Contacto</span>
+            </div>
+        </div>
+    </section>
+    <section class="contenedorformulario">
+        <div class="row">
+            <span class="active">Rellene el siguiente formulario:</span>
+        </div>
+
+        <form id="datos2016" method="post" action="usuario.html" onsubmit="return FormSubmit();">
+            <div class="row">
+                <label class="col-3">Nombre*:</label> <input type="text" class="col-6" name="required"
+                                                             id="nombre" required="required"
+                                                             maxlength="10"
+                                                             oninvalid="this.value='';setCustomValidity('El campo nombre sólo admite hasta 10 caracteres');deshabilitar();"
+                                                             oninput="habilitar();"
+                                                             pattern="^\D{1,10}$"><div class="col-3"></div>
+            </div>
+            <div class="row">
+                <label class="col-3">Apellidos 1*:</label> <input type="text" class="col-6" name="required"
+                                                                  id="apellido1" required="required"
+                                                                  maxlength="20"
+                                                                  oninvalid="this.value='';setCustomValidity('El campo apellido sólo admite hasta 20 caracteres');deshabilitar();"
+                                                                  oninput="habilitar();" pattern="^\w{1,20}$" >
+                <div class="col-3"></div>
+            </div>
+            <div class="row">
+                <label class="col-3">Apellidos 2*:</label> <input type="text" class="col-6" name="required"
+                                                                  id="apellido2" required="required"
+                                                                  maxlength="20"
+                                                                  oninvalid="this.value='';setCustomValidity('El campo apellido sólo admite hasta 20 caracteres');deshabilitar();"
+                                                                  oninput="habilitar();" pattern="^\w{1,20}$" >
+                <div class="col-3"></div>
+            </div>
+            <div class="row">
+                <label class="col-3">Email*:</label> <input type="email" class="col-6" name="required"
+                                                            id="email" required="required"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                                            oninput="habilitar();" oninvalid="this.value='';setCustomValidity('Tiene que ser un email valido');deshabilitar();"
+            ><div class="col-3"></div>
+            </div>
+            <div class="row">
+                <label class="col-3">Telefono fijo:</label> <input type="text" class="col-6"
+                                                                   id="telefonoF"
+                                                                   maxlength="9"
+                                                                   oninvalid="this.value='';setCustomValidity('Tiene que ser un número de telefono valido');deshabilitar();"
+                                                                    pattern="^\d{9}$"><div class="col-3"></div>
+            </div>
+            <div class="row">
+                <label class="col-3">Telefono móvil*:</label> <input type="text" class="col-6" name="required"
+                                                                     id="telefonoM" required="required"
+                                                                     maxlength="9"
+                                                                     oninvalid="this.value='';setCustomValidity('Tiene que ser un número de telefono valido');deshabilitar();"
+                                                                     oninput="habilitar();" pattern="^\d{9}$"><div class="col-3"></div>
+            </div>
+            <div class="row">
+                <label class="col-3">Descripción</label> <textarea class="col-6" rows="4" oninput="habilitar();" name="required" id="descripcion" required="required" oninvalid="setCustomValidity('Introduce alguna descripción');deshabilitar();"
+            ></textarea><div class="col-3"></div>
+            </div>
+            <div class="row">
+                <label class="col-3">Asunto</label>
+                <select class="col-6"  id="asunto" required="required">
+                    <option selected="selected">Inscribirse</option>
+                    <option>Prueba gratuita</option>
+                    <option>Recibir publicidad</option>
+                </select><div class="col-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-4 "></div>
+                <div class="col-3"><label class="">Terminos y condiciones*</label></div>
+                <div class="col-1"><input type="checkbox" id="terminos" disabled="disabled" required="required" oninvalid="setCustomValidity('Terminos y condiciones obligatorios')"
+                ></div>
+                <div class="col-4"></div>
+
+
+
+            </div>
+            <input type="submit" value="Enviar">
+
+        </form>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <ul>
+        <li><a href="Contacto.html">Contacte con nosotros</a></li>
+        <li><a target="_new" href="http://politicadecookies.com">Politica de cookies</a></li>
+        <li>&copy; Sergio García, Miguel Escolar, Victor de Lucas, Elena Jimenez.</li>
+        <li><input type="button" class="button" onclick="window.open('Licencias.html','licencias','width=500,height=500');" value="Licencia sitio web"></li>
+    </ul>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/Contacto.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
